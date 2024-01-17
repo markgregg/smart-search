@@ -1,0 +1,36 @@
+.smartSearchMain {
+  position: relative;
+  display: flex;
+  border: var(--smartSearchBorder, 1px solid rgb(204, 204, 204));
+  border-radius: 4px;
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+  color: var(--smartSearchFontColor, black);
+}
+
+.smartSearchFlow {
+  display: flex;
+  flex-flow: wrap;
+  flex-grow: 1;
+}
+
+.smartSearchClearIcon {
+  color: var(--smartSearchIconColor, black);
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+
+.smartSearchClearIcon:hover {
+  color: var(--smartSearchIconHoverColor, rgb(140, 140, 140));
+}
+
+.smartSearchSearchIcon {
+  align-self: center;
+  padding-right: 4px;
+}
+
+.defaultMatcherEdit {
+  flex-grow: 1;
+  display: flex;
+  align-self: end;
+}

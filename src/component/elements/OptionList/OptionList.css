@@ -1,0 +1,226 @@
+.optionListMain {
+  z-index: 9997;
+  position: absolute;
+  width: calc(100% - 2px);
+  color: var(--smartSearchFontColor, black);
+  background: transparent;
+}
+
+.topList {
+  z-index: 9999;
+  position: absolute;
+  width: calc(100% - 2px);
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+}
+
+.bottomList {
+  z-index: 9999;
+  position: absolute;
+  width: calc(100% - 2px);
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+}
+
+.topList ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.bottomList ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.activeOption {
+  z-index: 9999;
+  position: absolute;
+  width: calc(100% - 2px);
+  height: 100%;
+  color: #000000;
+}
+
+.optionListMainActive {
+  z-index: 9999;
+}
+
+.optionListMain ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.optionListOption {
+  padding-left: 10px;
+  padding-right: 5px;
+  text-align: start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.optionListActiveOption {
+  background: var(--smartSearchActiveOption, lightgray);
+  animation: bolder 300ms ease-in-out forwards;
+}
+
+.optionListCategory {
+  font-weight: bold;
+  font-size: x-small;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.optionDynamicList {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  border-top: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-left: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-bottom: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  border-right: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  border-radius: 4px;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+}
+
+.staticListContainer {
+  border-top: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-left: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-bottom: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  border-right: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  border-radius: 4px;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+}
+
+.optionStaticList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.optionStaticItem {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.optionStaticItem:hover {
+  background-color: var(--smartSearchActiveOption, lightgray);
+  animation: bolder 300ms ease-in-out forwards;
+}
+
+.optionsHelp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: x-small;
+  width: calc(100% - 10px);
+  border-bottom: 1px solid darkgray;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.helpKeys {
+  width: 80px;
+}
+
+.helpKeysb {
+  width: 60px;
+}
+
+.optionSelectMultiple {
+  position: absolute;
+  left: 50%;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.optionsStaticHeaders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.optionsStaticHeadersItem {
+  flex-grow: 1;
+  text-align: center;
+  border-top: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-left: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-bottom: var(--smartSearchOptionsBorder, 2px solid black);
+  border-right: var(--smartSearchOptionsBorder, 2px solid black);
+  min-width: 100px;
+  display: flex;
+  position: relative;
+}
+
+.optionsStaticHeadersItem:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.optionsStaticHeadersItemText {
+  flex-grow: 1;
+  font-size: x-small;
+}
+
+.optionsStaticHeadersIcon {
+  padding-right: 5px;
+}
+
+.optionsStaticSubItemsList {
+  position: absolute;
+  z-index: 999;
+  top: calc(100% + 2px);
+  border-top: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-left: var(--smartSearchOptionsBorder, 2px solid gainsboro);
+  border-bottom: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  border-right: var(--smartSearchOptionsBorder, 2px solid darkgray);
+  background: var(--smartSearchBackgroundColor, rgb(255, 255, 255));
+  transform-origin: top center;
+  padding-bottom: 5px;
+  animation: growDown 500ms ease-in-out forwards;
+}
+
+@keyframes bolder {
+  0% {
+    font-weight: normal;
+  }
+
+  100% {
+    font-weight: bolder;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.optionListOptionDelayedItem {
+  animation: slideIn 400ms ease-in-out forwards;
+  transform-origin: top left;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
